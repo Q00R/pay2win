@@ -5,20 +5,7 @@ import 'ex_list_widget.dart';
 import 'new_ex_widget.dart';
 import 'total_widget.dart';
 
-/*final List<Expense> allexpenses = [
-  Expense(
-    id: "e1",
-    title: "Coffee",
-    amount: 45,
-    date: DateTime.now(),
-  ),
-  Expense(
-    id: "e2",
-    title: "DSL",
-    amount: 14,
-    date: DateTime.now(),
-  )
-];*/
+
 double totalExpenses = 0;
 final List<ChartData> chartData = [
   ChartData("Food and Drinks", 0, Colors.green[200]),
@@ -156,7 +143,6 @@ class _MyHomePageState extends State<MyHomePage> {
         });
   }
 }
-
 class ChartData {
   ChartData(this.category, this.amount, [this.color]);
   final String category;
