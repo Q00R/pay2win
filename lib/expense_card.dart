@@ -20,8 +20,8 @@ class ExpenseCard extends StatelessWidget {
               margin: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                   border: Border.all(),
-                  color: Colors.blue,
-                  shape: BoxShape.circle),
+                  color: Colors.white,
+                  shape: BoxShape.rectangle),
               padding: const EdgeInsets.all(10),
               child: Center(
                 child: Text(
@@ -46,9 +46,9 @@ class ExpenseCard extends StatelessWidget {
                                 fontSize: 15, fontWeight: FontWeight.bold)),
                         //col child 2 is the date
                         Row(children: [
-                          const Icon(Icons.calendar_month, color: Colors.grey),
+                          const Icon(Icons.calendar_month, color: Colors.black),
                           Text(DateFormat('dd-MM-yyyy').format(myExpense.date),
-                              style: const TextStyle(color: Colors.grey)),
+                              style: const TextStyle(color: Colors.black)),
                           Container(
                               padding: const EdgeInsets.all(5),
                               child: myExpense.category)

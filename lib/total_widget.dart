@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 //Simple widget to display the total amount of expenses
 class TotalWidget extends StatefulWidget {
   final double totalExpenses;
   final bool portrait;
-  final List<ChartData> chartData;
   const TotalWidget(
       {super.key,
       required this.totalExpenses,
       required this.portrait,
-      required this.chartData});
+      });
 
   @override
   State<TotalWidget> createState() => _TotalWidgetState();
@@ -43,7 +41,6 @@ class _TotalWidgetState extends State<TotalWidget> {
                             Expanded(
                                 child: Text(
                               "Total: ${widget.totalExpenses} EGP",
-                              textScaleFactor: 2,
                             )),
                             IconButton(
                                 onPressed: () {
@@ -55,23 +52,12 @@ class _TotalWidgetState extends State<TotalWidget> {
                                 icon: const Icon(Icons.show_chart))
                           ],
                         ),
-                        showStats && totalExpenses != 0
-                            ? SfCircularChart(series: <CircularSeries>[
-                                DoughnutSeries<ChartData, String>(
-                                    dataSource: widget.chartData,
-                                    pointColorMapper: (data, _) => data.color,
-                                    xValueMapper: (data, _) => data.category,
-                                    yValueMapper: (data, _) => data.amount,
-                                    strokeWidth: 200)
-                              ])
-                            : Container()
                       ])
                     : Column(children: [
                         Center(
                             widthFactor: 3,
                             child: Text(
                               "Total: ${widget.totalExpenses} EGP",
-                              textScaleFactor: 2,
                             )),
                       ]))));
   }

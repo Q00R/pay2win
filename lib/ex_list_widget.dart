@@ -26,11 +26,9 @@ class ExListWidget extends StatelessWidget {
                       DateFormat('EEEE,MMMd,yyyy')
                           .format(lex[index].date)
                           .toString(),
-                      textScaleFactor: 1.5,
                     )),
                     Text(
                       "Total: ${lex[index].total} EGP",
-                      textScaleFactor: 1.5,
                     )
                   ])),
               ...lex[index]

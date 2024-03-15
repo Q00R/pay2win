@@ -13,8 +13,8 @@ class NewExWidget extends StatefulWidget {
 class _NewExWidgetState extends State<NewExWidget> {
   final title = TextEditingController();
   final amount = TextEditingController();
-  Widget category = const Icon(MyFlutterApp.drink);
-  String categoryName = "drink";
+  Widget category = const Icon(MyFlutterApp.food);
+  String categoryName = "food";
   Color? color = Colors.green[200];
 
   DateTime selectedDate = DateTime.utc(1970, 1, 1);
@@ -49,11 +49,11 @@ class _NewExWidgetState extends State<NewExWidget> {
                               onPressed: () {
                                 setState(() {
                                   categoryName = "drink";
-                                  category = const Icon(MyFlutterApp.drink);
-                                  color = Colors.green[200];
+                                  category = const Icon(MyFlutterApp.food);
+                                  color = Colors.green[100];
                                 });
                               },
-                              icon: const Icon(MyFlutterApp.drink),
+                              icon: const Icon(MyFlutterApp.food),
                             ))),
                     Container(
                         margin: const EdgeInsets.all(5),
