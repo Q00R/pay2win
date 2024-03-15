@@ -5,12 +5,11 @@ import 'main.dart';
 class TotalWidget extends StatefulWidget {
   final double totalExpenses;
   final bool portrait;
-  final List<ChartData> chartData;
   const TotalWidget(
       {super.key,
       required this.totalExpenses,
       required this.portrait,
-      required this.chartData});
+      });
 
   @override
   State<TotalWidget> createState() => _TotalWidgetState();

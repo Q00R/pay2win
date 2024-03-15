@@ -39,7 +39,7 @@ class _NewExWidgetState extends State<NewExWidget> {
                         margin: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           color: categoryName == "drink"
-                              ? Colors.green[100]
+                              ? Colors.green[200]
                               : null,
                           shape: BoxShape.circle,
                         ),
@@ -50,7 +50,7 @@ class _NewExWidgetState extends State<NewExWidget> {
                                 setState(() {
                                   categoryName = "drink";
                                   category = const Icon(MyFlutterApp.drink);
-                                  color = Colors.green[100];
+                                  color = Colors.green[200];
                                 });
                               },
                               icon: const Icon(MyFlutterApp.drink),
