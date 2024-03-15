@@ -1,2 +1,3 @@
 # pay2win
 a simple money tracker app
+adding some features soon...
